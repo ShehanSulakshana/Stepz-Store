@@ -21,7 +21,7 @@ This repository is a **work in progress** and is being actively built out. Core 
 
 
 
-<img src="https://github.com/ShehanSulakshana/ShehanSulakshana/blob/main/ProjectAssets/Stepz-Store-Repo-Banner.jpg"alt="Stepz Store Banner"/>
+<img src="https://github.com/ShehanSulakshana/ShehanSulakshana/blob/main/ProjectAssets/Stepz-Store-Repo-Banner.jpg" alt="Stepz Store Banner"/>
 
 
 ---
