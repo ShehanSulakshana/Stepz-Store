@@ -1,0 +1,51 @@
+final products = [
+  {
+    'id': '0',
+    'title': 'Men\'s Nike Shoes',
+    'price': 44.52,
+    'sizes': [8, 9, 10, 11],
+    'imageUrl': 'assets/images/nike_shoes.png',
+    'company': 'Nike',
+  },
+
+  {
+    'id': '1',
+    'title': 'Nike Zoom Pegasus',
+    'price': 120.50,
+    'sizes': [7, 8, 9, 10],
+    'imageUrl': 'assets/images/nike_zoom.png',
+    'company': 'Nike',
+  },
+  {
+    'id': '2',
+    'title': 'Adidas Runner Pro',
+    'price': 120.00,
+    'sizes': [7, 8, 9, 10, 12],
+    'imageUrl': 'assets/images/adidas_runner.png',
+    'company': 'Addidas',
+  },
+  {
+    'id': '3',
+    'title': 'Adidas Ultraboost Light',
+    'price': 190.00,
+    'sizes': [8, 9, 10, 11],
+    'imageUrl': 'assets/images/adidas_ultraboost.png',
+    'company': 'Addidas',
+  },
+  {
+    'id': '4',
+    'title': 'Adidas Forum Low',
+    'price': 100.00,
+    'sizes': [6, 7, 8, 9, 10],
+    'imageUrl': 'assets/images/adidas_forum.png',
+    'company': 'Addidas',
+  },
+  {
+    'id': '5',
+    'title': 'Bata Formal Derbys',
+    'price': 45.99,
+    'sizes': [7, 8, 9, 10, 11],
+    'imageUrl': 'assets/images/bata_formal.png',
+    'company': 'Bata',
+  },
+];
