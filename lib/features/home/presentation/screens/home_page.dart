@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shop_application/pages/cart_page.dart';
-import 'package:shop_application/pages/product_list.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -12,7 +10,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int currentPage = 0;
 
-  List<Widget> pages = [ProductList(), CartPage()];
+  // List<Widget> pages = [ProductList(), CartPage()];
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +33,7 @@ class _HomePageState extends State<HomePage> {
         unselectedFontSize: 0,
       ),
 
-      body: IndexedStack(index: currentPage, children: pages),
+      // body: IndexedStack(index: currentPage, children: pages),
     );
   }
 }

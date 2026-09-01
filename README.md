@@ -86,7 +86,6 @@ lib/
 - [Flutter SDK](https://docs.flutter.dev/get-started/install) (`^3.10.3` Dart SDK or later)
 - An emulator/simulator, connected device, or a web browser
 
-"Home Screen"/>
 
 ---
 
