@@ -1,5 +1,5 @@
-name: shop_application
-description: "A new Flutter project."
+name: stepz_store
+description: "Stepz Store is a Flutter application that allows users to browse and purchase products from an online store. It provides a seamless shopping experience with features like product listing, cart management, and checkout process."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev

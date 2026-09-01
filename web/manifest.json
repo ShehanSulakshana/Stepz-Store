@@ -1,6 +1,6 @@
 {
-    "name": "shop_application",
-    "short_name": "shop_application",
+    "name": "stepz_store",
+    "short_name": "stepz_store",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
