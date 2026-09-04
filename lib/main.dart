@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:stepz_store/features/Authentication/pages/signin.dart';
+import 'package:stepz_store/core/routing/goroute.dart';
+import 'package:stepz_store/core/theme/theme.dart';
+import 'package:stepz_store/features/Authentication/pages/signin_page.dart';
+import 'package:stepz_store/features/Authentication/pages/signup_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,26 +14,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+    return MaterialApp.router(
+      title: 'Stepz App',
+      theme: AppTheme.lightTheme,
+      routerConfig: router,
     );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Signin();
   }
 }
