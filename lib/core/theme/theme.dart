@@ -66,8 +66,12 @@ class AppTheme {
         style: ElevatedButton.styleFrom(
           backgroundColor: primaryColor,
           foregroundColor: Colors.white,
+          elevation: 5,
+          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
           textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(100),
+          ),
         ),
       ),
 
@@ -79,7 +83,7 @@ class AppTheme {
         labelStyle: const TextStyle(color: Color.fromRGBO(99, 99, 99, 1.0)),
         floatingLabelStyle: const TextStyle(color: primaryColor),
         contentPadding: const EdgeInsets.symmetric(
-          vertical: 12,
+          vertical: 14,
           horizontal: 16,
         ),
         border: OutlineInputBorder(
