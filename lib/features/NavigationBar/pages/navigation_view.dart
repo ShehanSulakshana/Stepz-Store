@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:stepz_store/core/theme/theme.dart';
+import 'package:stepz_store/features/Cart/pages/cart_page.dart';
+import 'package:stepz_store/features/Home/pages/home_page.dart';
+import 'package:stepz_store/features/Profile/pages/profile_page.dart';
 
 class NavigationView extends StatefulWidget {
   const NavigationView({super.key});
@@ -16,14 +20,16 @@ class _NavigationViewState extends State<NavigationView> {
   ];
 
   List<Widget> _pages = [
-    // TODO : Add pages for each navigation item
+    const HomePage(),
+    const CartPage(),
+    const ProfilePage(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: _icons.elementAt(_selectedIndex), //Important: just a placeholder
+        child: _pages.elementAt(_selectedIndex), //Important: just a placeholder
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
@@ -33,12 +39,18 @@ class _NavigationViewState extends State<NavigationView> {
           });
         },
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
+            icon: Icon(Icons.home, color: AppTheme.primaryColor),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_cart, color: AppTheme.primaryColor),
             label: 'Cart',
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person, color: AppTheme.primaryColor),
+            label: 'Profile',
+          ),
         ],
       ),
     );
