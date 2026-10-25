@@ -8,15 +8,19 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            // ********* HEADER *********
-            Padding(
-              padding: const EdgeInsets.only(bottom: 24.0, top: 32.0),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          // ********* HEADER *********
+          SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.only(
+                bottom: 8.0,
+                top: 8.0,
+                left: 16,
+                right: 16,
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -38,15 +42,13 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
+          ),
 
-            SizedBox(height: 24.0),
+          SizedBox(height: 24.0),
 
-            // ********* CAROUSEL *********
-            CareouselWidget(),
-            
-
-          ],
-        ),
+          // ********* CAROUSEL *********
+          CareouselWidget(),
+        ],
       ),
     );
   }
