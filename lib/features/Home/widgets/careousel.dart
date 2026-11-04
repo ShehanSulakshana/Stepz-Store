@@ -1,30 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:stepz_store/core/theme/theme.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:stepz_store/features/Home/providers/careosel_provider.dart';
 
-class CareouselWidget extends StatefulWidget {
-  const CareouselWidget({super.key});
+class CareouselWidget extends ConsumerStatefulWidget {
+  CareouselWidget({super.key});
 
   @override
-  State<CareouselWidget> createState() => _CareouselWidgetState();
+  ConsumerState<CareouselWidget> createState() => _CareouselWidgetState();
 }
 
-class _CareouselWidgetState extends State<CareouselWidget> {
-  List<String> imageUrls = [
-    'https://raw.githubusercontent.com/ShehanSulakshana/ShehanSulakshana/refs/heads/main/ProjectAssets/Stepz-Store-Repo-Banner.jpg',
-    'https://raw.githubusercontent.com/ShehanSulakshana/ShehanSulakshana/refs/heads/main/ProjectAssets/Stepz-Store-Repo-Banner.jpg',
-    'https://raw.githubusercontent.com/ShehanSulakshana/ShehanSulakshana/refs/heads/main/ProjectAssets/Stepz-Store-Repo-Banner.jpg',
-  ];
-
+class _CareouselWidgetState extends ConsumerState<CareouselWidget> {
   int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
+    final List<String> imageLinks = ref.watch(careoselProvider);
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         CarouselSlider(
-          items: imageUrls
+          items: imageLinks
               .map(
                 (item) => Container(
                   margin: EdgeInsets.all(8.0),
@@ -54,7 +52,7 @@ class _CareouselWidgetState extends State<CareouselWidget> {
         SizedBox(height: 8.0),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: imageUrls.asMap().entries.map((entry) {
+          children: imageLinks.asMap().entries.map((entry) {
             return GestureDetector(
               onTap: () => setState(() {
                 currentIndex = entry.key;

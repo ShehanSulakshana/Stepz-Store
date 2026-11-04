@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:stepz_store/core/routing/goroute.dart';
 import 'package:stepz_store/core/theme/theme.dart';
 import 'package:stepz_store/features/Authentication/pages/signin_page.dart';
 import 'package:stepz_store/features/Authentication/pages/signup_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ProviderScope(child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
